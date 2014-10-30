@@ -8468,4 +8468,41 @@
       </preConditions>
       <dropColumn tableName="patient" columnName="tribe"/>
     </changeSet>
+
+    <changeSet id="201410291606-TRUNK-3474" author="jbuczynski">
+        <comment>
+            Dropping not null constraint from program.description column
+        </comment>
+        <dropNotNullConstraint tableName="concept" columnName="description" columnDataType="varchar(500)" />
+    </changeSet>
+
+    <changeSet id="201410291613-TRUNK-3474" author="jbuczynski">
+        <comment>
+            Dropping not null constraint from order_type.description column
+        </comment>
+        <dropNotNullConstraint tableName="order_type" columnName="description" columnDataType="varchar(1024)" />
+    </changeSet>
+
+    <changeSet id="201410291614-TRUNK-3474" author="jbuczynski">
+        <comment>
+            Dropping not null constraint from concept_name_tag_id.description column
+        </comment>
+        <dropNotNullConstraint tableName="concept_name_tag_id" columnName="description" columnDataType="varchar(65535)" />
+    </changeSet>
+
+    <changeSet id="201410291615-TRUNK-3474" author="jbuczynski">
+        <comment>
+            Dropping not null constraint from concept_description.description column
+        </comment>
+        <dropNotNullConstraint tableName="concept_description" columnName="description" columnDataType="varchar(65535)" />
+    </changeSet>
+
+    <changeSet id="201410291616-TRUNK-3474" author="jbuczynski">
+        <comment>
+            Dropping not null constraint from active_list_type.description column
+        </comment>
+        <dropNotNullConstraint tableName="active_list_type" columnName="description" columnDataType="varchar(255)" />
+    </changeSet>
+
+
 </databaseChangeLog>
